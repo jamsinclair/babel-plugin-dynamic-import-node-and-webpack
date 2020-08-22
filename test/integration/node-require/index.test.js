@@ -20,7 +20,7 @@ const transpileFile = (filename, inputDir, outputDir, pluginOptions) => {
   writeFileSync(join(outputDir, filename), transformCodeWithPlugin(src, pluginOptions));
 };
 
-test('can require module with dynamic import', (t) => {
+test('node.js can require module with dynamic import', (t) => {
   const SOURCE_DIR = join(__dirname, 'src');
   const TRANSPILED_DIR = join(__dirname, 'dist-with-interop');
 
@@ -34,7 +34,7 @@ test('can require module with dynamic import', (t) => {
   });
 });
 
-test('can require module with dynamic import and no default export', (t) => {
+test('node.js can require module with dynamic import and no default export', (t) => {
   const SOURCE_DIR = join(__dirname, 'src');
   const TRANSPILED_DIR = join(__dirname, 'dist-with-no-interop');
   const pluginOptions = { noInterop: true };
