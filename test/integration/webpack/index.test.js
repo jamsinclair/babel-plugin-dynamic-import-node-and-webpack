@@ -29,7 +29,7 @@ const webpackConfig = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            // plugins: ['./src/index.js'],
+            plugins: ['./src/index.js'],
           },
         },
       },
