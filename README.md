@@ -2,13 +2,15 @@
 
 Babel plugin to transpile `import()` to both a deferred `require()`, for node, and `require.ensure`, for webpack. Allowing dual compatibility for both environments.
 
+**Why would you need this?** If you have a shared module with dynamic imports that needs to be shared between both node and browser environments and don't want to do additional transforming with babel.
+
 This plugin is a shameless patching together of hardwork by Airbnb:
 - https://github.com/airbnb/babel-plugin-dynamic-import-webpack
 - https://github.com/airbnb/babel-plugin-dynamic-import-node
 
 **NOTE:** Babylon >= v6.12.0 is required to correctly parse dynamic imports.
 
-**NOTE:** This plugin generates code compatible with Node.js and Webpack >=1. Webpack >= 2 supports `import()` natively, however by using this plugin you can share code compatible with both node and webpack.
+**NOTE:** Webpack >= 2 supports `import()` natively. Only consider using this plugin if you need code that can interop between both node and Webpack without another babel transform.
 
 ## Installation
 
