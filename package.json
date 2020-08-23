@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-dynamic-import-node-and-webpack",
   "version": "1.0.0",
-  "description": "Babel plugin to transpile import() to a deferred require(), for node",
+  "description": "Transpile `import()` to support both deferred `require()` for node and `require.ensure` for Webpack",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
